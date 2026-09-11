@@ -155,36 +155,28 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
-.rise-logo {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2.5rem;
-  isolation: isolate;
+.brand {
+    display: flex;
+    align-items: center;
 }
 
-.rise-logo::before {
-  content: "";
-  position: absolute;
-  width: 420px;
-  height: 260px;
-  background: radial-gradient(
-    ellipse,
-    rgba(168, 85, 247, 0.35) 0%,
-    rgba(11, 255, 232, 0.12) 35%,
-    rgba(168, 85, 247, 0.06) 55%,
-    transparent 75%
-  );
-  filter: blur(25px);
-  z-index: -1;
+.logo-link {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background: none;
+    text-decoration: none;
 }
 
-.rise-logo img {
-  width: 300px;
-  height: auto;
-  mix-blend-mode: screen;
-  filter:
-    drop-shadow(0 0 12px rgba(168, 85, 247, 0.45))
-    drop-shadow(0 0 28px rgba(11, 255, 232, 0.18));
+.logo-link:hover {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.logo-link img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
