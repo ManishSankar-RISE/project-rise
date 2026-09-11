@@ -3,19 +3,28 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
-
 :root {
-	--accent: #6A0D91;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+  --accent: #FF9D24;
+  --accent-dark: #7C3AED;
+
+  --black: 245, 245, 245;
+  --gray: 150, 145, 160;
+  --gray-light: 40, 35, 48;
+  --gray-dark: 220, 216, 228;
+
+  --background: #07050B;
+  --surface: #0E0B14;
+  --surface-light: #15111D;
+  --border: #282230;
+
+  --gray-gradient: #07050B, #07050B;
+
+  --box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.35),
+    0 12px 40px rgba(0, 0, 0, 0.25);
 }
+
+
 body {
 	font-family: var(--font-atkinson);
 	margin: 0;
