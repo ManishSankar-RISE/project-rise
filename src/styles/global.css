@@ -4,40 +4,46 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 :root {
-  --accent: #FF9D24;
+  --accent: #A855F7;
   --accent-dark: #7C3AED;
 
-  --black: 245, 245, 245;
-  --gray: 150, 145, 160;
-  --gray-light: 40, 35, 48;
-  --gray-dark: 220, 216, 228;
+  --black: 245, 245, 250;
 
-  --background: #07050B;
-  --surface: #0E0B14;
-  --surface-light: #15111D;
-  --border: #282230;
+  --gray: 150, 150, 170;
 
-  --gray-gradient: #07050B, #07050B;
+  --gray-light: 38, 32, 50;
+  --gray-dark: 220, 218, 230;
+
+  --gray-gradient:
+    rgba(18, 14, 25, 0.95),
+    #0B0810;
 
   --box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.35),
-    0 12px 40px rgba(0, 0, 0, 0.25);
+    0 2px 6px rgba(0, 0, 0, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    0 16px 32px rgba(0, 0, 0, 0.30);
 }
-
 
 body {
-	font-family: var(--font-atkinson);
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
+  font-family: var(--font-atkinson);
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  background:
+    radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.12), transparent 45%),
+    #0B0810;
+
+  background-attachment: fixed;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  color: rgb(var(--gray-dark));
+  font-size: 20px;
+  line-height: 1.7;
 }
+
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);
@@ -74,10 +80,11 @@ b {
 	font-weight: 700;
 }
 a {
-	color: var(--accent);
+  color: var(--accent);
 }
+
 a:hover {
-	color: var(--accent);
+  color: #C084FC;
 }
 p {
 	margin-bottom: 1em;
