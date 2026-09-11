@@ -56,37 +56,44 @@ import HeaderLink from './HeaderLink.astro';
 	}
 
 	h2 a,
-	h2 a.active {
-		text-decoration: none;
+	h2 a.active,
+	h2 a:hover {
+		display: inline-block;
+		padding: 0.25em 0.7em;
+		color: #FFFFFF;
+		text-decoration: none !important;
+		border: none;
+		background: transparent;
+		box-shadow: none;
 	}
-	nav a {
-		padding: 0.3em 0.6em;
-		margin: 0 0.15em;
+		.internal-links a {
+		padding: 0.1em 0.5em;
+		margin: 0 0.25em;
 		color: #F5F3FF;
 		border: 2px solid transparent;
-		border-radius: 999px;
+		border-radius: 600px;
 		text-decoration: none;
-		transition: all 0.25s ease;
+		transition: all 0.35s ease;
 	}
 
-	nav a:hover {
+	 a:hover {
 		color: #FFFFFF;
-		border-color: #0BFFE8;
-		background: rgba(11, 255, 232, 0.06);
+		border-color: #4cffed;
+		background: rgba(53, 255, 235, 0);
 
 		box-shadow:
-			0 0 6px rgba(11, 255, 232, 0.35),
-			0 0 14px rgba(11, 255, 232, 0.15);
+			0 0 6px rgba(11, 255, 231, 0.644),
+			0 0 14px rgba(11, 255, 231, 0.281);
 	}
 
-	nav a.active {
+	.internal-links a.active {
 		color: #FFFFFF;
-		border-color: #A855F7;
+		border-color: #bb71ff;
 		background: rgba(168, 85, 247, 0.10);
 
 		box-shadow:
-			0 0 5px rgba(11, 255, 232, 0.45),
-			0 0 12px rgba(11, 255, 232, 0.20);
+			0 0 5px rgb(160, 103, 207),
+			0 0 12px rgba(132, 99, 160, 0.582);
 	}
 	nav {
 	display: flex;
@@ -99,14 +106,28 @@ import HeaderLink from './HeaderLink.astro';
 		align-items: center;
 	}
 
-	.social-links,
-	.social-links a {
+	.social-links {
 		display: flex;
 		align-items: center;
 	}
-	.social-links,
+
 	.social-links a {
 		display: flex;
+		align-items: center;
+		padding: 0.5em;
+		margin: 0 0.15em;
+		color: #F5F3FF;
+		text-decoration: none;
+		border: none;
+		background: transparent;
+		box-shadow: none;
+	}
+
+	.social-links a:hover {
+		color: #0BFFE8;
+		border: none;
+		background: transparent;
+		box-shadow: none;
 	}
 	@media (max-width: 720px) {
 		.social-links {
