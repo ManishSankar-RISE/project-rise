@@ -127,12 +127,12 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 				<div class="milestone-label intelligence">
 				<span>2024–25</span>
-				<strong>AI + ROBOTICS</strong>
+				<strong>IDEA DEVELOPMENT</strong>
 				</div>
 
 				<div class="milestone-label current">
 				<span>2026</span>
-				<strong>WORKING SYSTEMS</strong>
+				<strong>AI, ROBOTICS AND WORKING SYSTEMS</strong>
 				</div>
 
 				<div class="milestone-label future">
@@ -145,4 +145,287 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		</main>
 		<Footer />
 	</body>
+	<style>
+		/* ================================
+   	
+		================================ */
+
+		.development-path {
+		margin-top: 8rem;
+		padding: 5rem 0 7rem;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+
+		align-items: center;
+		}
+
+		/* LEFT INFORMATION */
+
+		.path-info {
+		padding-right: 2rem;
+		}
+
+		.path-info .eyebrow {
+		margin: 0 0 1rem;
+
+		font-family: monospace;
+		font-size: 0.8rem;
+		letter-spacing: 0.15em;
+
+		color: #4cffed;
+		}
+
+		.path-info h2 {
+		margin: 0 0 1.5rem;
+
+		font-size: 2.8rem;
+		line-height: 1.1;
+
+		color: #f5f3ff;
+		}
+
+		.path-info > p:not(.eyebrow) {
+		color: #c8c3d9;
+		line-height: 1.8;
+		}
+
+		/* STATUS PANEL */
+
+		.status-panel {
+		margin-top: 2rem;
+		padding: 1.2rem 1.4rem;
+
+		border-left: 2px solid #bb71ff;
+
+		background: rgba(168, 85, 247, 0.06);
+
+		box-shadow:
+			0 0 20px rgba(168, 85, 247, 0.08),
+			inset 0 0 20px rgba(168, 85, 247, 0.03);
+
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		}
+
+		.status-label {
+		font-family: monospace;
+		font-size: 0.7rem;
+		letter-spacing: 0.12em;
+		color: #aaa4b9;
+		}
+
+		.status-panel strong {
+		font-family: monospace;
+		font-size: 1.2rem;
+		color: #ffffff;
+		letter-spacing: 0.08em;
+		}
+
+		.status-active {
+		font-family: monospace;
+		font-size: 0.72rem;
+		color: #4cffed;
+		}
+
+
+		/* ================================
+		PATH MAP
+		================================ */
+
+		.path-map {
+		position: relative;
+
+		width: 100%;
+		max-width: 500px;
+
+		height: 900px;
+
+		margin: 0 auto;
+		}
+
+
+		/* SVG */
+
+		.development-route {
+		width: 100%;
+		height: 100%;
+
+		overflow: visible;
+		}
+
+
+		/* DARK ROAD */
+
+		.route-base {
+		fill: none;
+
+		stroke: rgba(255, 255, 255, 0.08);
+		stroke-width: 28;
+
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		}
+
+
+		/* GLOWING ROAD */
+
+		.route-glow {
+		fill: none;
+
+		stroke: #8b5cf6;
+		stroke-width: 3;
+
+		stroke-linecap: round;
+		stroke-linejoin: round;
+
+		filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.8));
+		}
+
+
+		/* MILESTONES */
+
+		.milestone {
+		fill: #0b0810;
+		stroke: #bb71ff;
+		stroke-width: 3;
+
+		filter: drop-shadow(0 0 5px rgba(187, 113, 255, 0.7));
+		}
+
+		.milestone.active {
+		fill: #4cffed;
+		stroke: #ffffff;
+		stroke-width: 3;
+
+		filter:
+			drop-shadow(0 0 5px #4cffed)
+			drop-shadow(0 0 12px rgba(76, 255, 237, 0.6));
+		}
+
+		.milestone.future {
+		fill: #0b0810;
+		stroke: rgba(255, 255, 255, 0.35);
+		filter: none;
+		}
+
+
+		/* ================================
+		PIXEL ROVER
+		================================ */
+
+		.pixel-rover rect {
+		fill: #f5f3ff;
+		}
+
+		.pixel-rover .rover-screen {
+		fill: #0b0810;
+		}
+
+		.pixel-rover .rover-light {
+		fill: #4cffed;
+		}
+
+		.pixel-rover .rover-wheel {
+		fill: #8b5cf6;
+		}
+
+
+		/* ================================
+		MILESTONE LABELS
+		================================ */
+
+		.milestone-label {
+		position: absolute;
+
+		display: flex;
+		flex-direction: column;
+
+		gap: 0.2rem;
+
+		font-family: monospace;
+
+		padding: 0.7rem 0.9rem;
+
+		background: rgba(11, 8, 16, 0.82);
+		border: 1px solid rgba(187, 113, 255, 0.25);
+
+		backdrop-filter: blur(8px);
+
+		box-shadow:
+			0 0 15px rgba(168, 85, 247, 0.08);
+		}
+
+		.milestone-label span {
+		font-size: 0.7rem;
+		color: #4cffed;
+		letter-spacing: 0.08em;
+		}
+
+		.milestone-label strong {
+		font-size: 0.8rem;
+		color: #f5f3ff;
+		letter-spacing: 0.04em;
+		}
+
+
+		/* INDIVIDUAL POSITIONS */
+
+		.milestone-label.concept {
+		top: 2%;
+		right: -5%;
+		}
+
+		.milestone-label.prototype {
+		top: 25%;
+		left: -5%;
+		}
+
+		.milestone-label.intelligence {
+		top: 47%;
+		right: -8%;
+		}
+
+		.milestone-label.current {
+		top: 69%;
+		left: -10%;
+
+		border-color: rgba(76, 255, 237, 0.45);
+
+		box-shadow:
+			0 0 15px rgba(76, 255, 237, 0.12);
+		}
+
+		.milestone-label.future {
+		bottom: 0;
+		right: -5%;
+
+		opacity: 0.55;
+		}
+
+
+		/* MOBILE */
+
+		@media (max-width: 800px) {
+		.development-path {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.path-info {
+			padding-right: 0;
+		}
+
+		.path-map {
+			height: 750px;
+			max-width: 420px;
+		}
+
+		.milestone-label {
+			transform: scale(0.9);
+		}
+		}
+	</style>
 </html>
